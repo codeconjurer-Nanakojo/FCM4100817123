@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Villa</title>
+    <script src="/scripts/aframe.min.js"></script>
+    <script src="/scripts/aframe-particle-system-component.min.js"></script>
+    <script src="/scripts/aframe-extra-min.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="outsidelight" src="assets/models/knotted_street_lamp/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree" src="assets/models/big-tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="fountain" src="assets/models/zsolnay_fountain.glb"></a-asset-item>
+            <a-asset-item id="wall_lamp" src="assets/models/wall_lamp.glb"></a-asset-item>
+            <a-asset-item id="poolbed" src="assets/models/poolsidebed.glb"></a-asset-item>
+            <a-asset-item id="poolshade" src="assets/models/at_a_beach.glb"></a-asset-item>
+            <a-asset-item id="poolchildren" src="assets/models/pool_children.glb"></a-asset-item>
+            <a-asset-item id="tenis" src="assets/models/tenis_pitch.glb"></a-asset-item>
+            <a-asset-item id="pooladult" src="assets/models/pool_adult.glb"></a-asset-item>
+            <a-asset-item id="bugatti" src="assets/models/bugatti_rivo.glb"></a-asset-item>
+            <a-asset-item id="car2" src="assets/models/car2.glb"></a-asset-item>
+            <a-asset-item id="car1" src="assets/models/car1.glb"></a-asset-item>
+            <a-asset-item id="villa" src="assets/models/villa.glb"></a-asset-item>
+            <a-asset-item id="fencegate" src="assets/models/fencegate.glb"></a-asset-item>
+            <a-asset-item id="wall" src="assets/models/wall.glb"></a-asset-item>
+            <a-asset-item id="garage" src="assets/models/industrial_garage.glb"></a-asset-item>
+            <img src="/assets/textures/sky.jpg" alt="the sky" id="sky">
+            <img src="/assets/textures/grass.jpg" alt="grass" id="grass">
+            <img src="/assets/textures/tile.png" alt="outdoor tiles" id="tiles">
+        </a-assets>
+    <!-- Ground -->
+    <a-plane 
+    position="0 0.2 0" 
+    rotation="-90 0 0" 
+    width="80" 
+    height="80" 
+    material="src:#tiles; repeat: 50 50; wrap: repeat"
+></a-plane>
+
+    <!-- Lighting -->
+    <a-light type="directional" position="0 5 2" intensity="1"></a-light>  
+    <!-- sky -->
+    <a-sky src="#sky"></a-sky>
+    <!-- the house  -->
+
+    <a-gltf-model src="#villa" position="-3 0.2 1.4" scale="1.2 1.2 1.2"></a-gltf-model>
+<!-- house roof -->
+ <a-box width="24" depth="17" height="0.1" position="-3 3.5 1.4"></a-box>
+ <a-gltf-model src="#villa" position="-3 3.5 1.4" scale="1.2 1.2 1.2"></a-gltf-model>
+ <a-box width="24" depth="17" height="0.1" position="-3 7 1.4"></a-box>
+    <!-- fence -->
+<a-entity>
+        <!-- fence gate -->
+        <a-gltf-model src="#fencegate" position="0 1.44 39.5" scale="1 1 1"></a-gltf-model>
+        <!-- fence wall  -->
+    <!-- frontwall -->
+    <a-entity>
+    <a-gltf-model id="wallModel"  src="#wall"   position="5 0.408 39.65" scale="0.0027 0.0027 0.0027"></a-gltf-model>
+    <a-gltf-model id="wallModel"src="#wall" position="-10 0.408 39.65" scale="0.0027 0.0027 0.0027" brownify> </a-gltf-model>
+    <a-gltf-model  id="wallModel" src="#wall" position="-14 0.408 39.65"  scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+    <a-gltf-model id="wallModel" src="#wall" position="-18 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+    <a-gltf-model id="wallModel"src="#wall" position="-22 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+    <a-gltf-model id="wallModel"src="#wall" position="-26 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+    <a-gltf-model id="wallModel"src="#wall" position="-30 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+    <a-gltf-model id="wallModel"src="#wall" position="-34 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="-38 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <!-- fence to the right of the gate -->
+    <a-gltf-model  id="wallModel"src="#wall" position="9 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="13 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="17 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="21 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="25 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="29 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="33 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    <a-gltf-model  id="wallModel"src="#wall" position="37 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+    </a-entity>
+    <!-- back wall -->
+    <a-entity position="0 0 -79">
+        <a-gltf-model id="wallModel"  src="#wall"   position="5 0.408 39.65" scale="0.0027 0.0027 0.0027"></a-gltf-model>
+        <a-gltf-model id="wallModel"src="#wall" position="-10 0.408 39.65" scale="0.0027 0.0027 0.0027" brownify> </a-gltf-model>
+        <a-gltf-model  id="wallModel" src="#wall" position="-14 0.408 39.65"  scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+        <a-gltf-model id="wallModel" src="#wall" position="-18 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+        <a-gltf-model id="wallModel"src="#wall" position="-22 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+        <a-gltf-model id="wallModel"src="#wall" position="-26 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+        <a-gltf-model id="wallModel"src="#wall" position="-30 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+        <a-gltf-model id="wallModel"src="#wall" position="-34 0.408 39.65" scale="0.0027 0.0027 0.0027"brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="-38 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+                    <!-- fence gate -->
+        <a-gltf-model src="#fencegate" position="0 1.44 39.5" scale="1 1 1"></a-gltf-model>
+        <!-- fence to the right of the gate -->
+        <a-gltf-model  id="wallModel"src="#wall" position="9 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="13 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="17 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="21 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="25 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="29 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="33 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        <a-gltf-model  id="wallModel"src="#wall" position="37 0.408 39.65"  scale="0.0027 0.0027 0.0027" brownify></a-gltf-model >
+        </a-entity>
+    <!-- vertical wall right-->
+    <a-entity position="34 0 -0.5">
+    
+    <a-gltf-model src="#wall" position="5 0.408 38" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 34" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 30" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 26" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 22" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 18" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 14" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 10" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 6" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 2" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -2" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -6" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -10" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -14" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -18" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -22" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -26" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -30" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -30" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -34" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    <a-gltf-model src="#wall" position="5 0.408 -38" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+    </a-entity>
+    <!-- vertical wall left-->
+    <a-entity position="-45 0 -0.5">
+    
+        <a-gltf-model src="#wall" position="5 0.408 38" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 34" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 30" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 26" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 22" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 18" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 14" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 10" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 6" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 2" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -2" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -6" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -10" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -14" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -18" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -22" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -26" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -30" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -30" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -34" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        <a-gltf-model src="#wall" position="5 0.408 -38" rotation="0 90 0" scale="0.0027 0.0027 0.0027" brownify></a-gltf-model>
+        </a-entity>
+    </a-entity>
+<!-- garage -->
+<a-entity>
+    <a-gltf-model src="#garage" position="-23 -3.6 20" rotation="0 90 0 " scale="1 1 1"></a-gltf-model>
+<!-- cars in garage-->
+<a-gltf-model src="#car2" position="-31.5 0.36 28" scale="1.2 1.2 1.2"></a-gltf-model>
+<a-gltf-model src="#car2" position="-35 0.36 28" scale="1.1 1.1 1.1"></a-gltf-model>
+<a-gltf-model src="#bugatti" position="-28 0.38 28" scale="1 1 1"></a-gltf-model>
+
+</a-entity>
+<!-- the children pool  -->
+<a-gltf-model src="#poolchildren" position="18 0.5 -11" scale="0.5 0.5 0.5" rotation="0 0 0"></a-gltf-model>
+<!-- adult pool -->
+<a-gltf-model id="poolModel" src="#pooladult" position="18 -0.5 2" scale="8 8 8" rotation="0 180 0"></a-gltf-model>
+
+
+<!-- adult pool water -->
+<a-entity position="18 0.6 2.1" id="pool-water" 
+          ocean="density: 10; 
+                width: 8.6; 
+                depth: 14.3; 
+                speed: 0.5;
+                amplitude: 0.1;
+                amplitudeVariance: 0.05;
+                rippleHeight: 0.05;
+                rippleSpeed: 0.25"
+          material="color: #9CE3F9; 
+                   opacity: 0.7; 
+                   metalness: 0.2; 
+                   roughness: 0.5;
+                   transparent: true"
+          rotation="-90 0 0">
+</a-entity>
+
+<!-- bed at the pool side  -->
+<a-gltf-model  src="#poolshade" position="29 0.35 -9" scale="0.5 0.5 0.5" rotation="0 270 0"></a-gltf-model>
+<a-gltf-model  src="#poolbed" position="29 0.35 0" scale="0.005 0.005 0.005" rotation="0 270 0"></a-gltf-model>
+<a-gltf-model  src="#poolbed" position="29 0.35 6" scale="0.005 0.005 0.005" rotation="0 270 0"></a-gltf-model>
+
+<!-- wall lamps  -->
+<!-- fountain -->
+<a-gltf-model src="#fountain" position="-3 2 30" scale="1 1 1" rotation="0 0 0"></a-gltf-model>
+<!-- cars around fountain -->
+<a-gltf-model src="#car2" position="2 0.36 25" scale="1.2 1.2 1.2" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#bugatti" position="-8 0.36 25" scale="1.2 1.2 1.2" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#car2" position="-8 0.36 33" scale="1.2 1.2 1.2" rotation="0 225 0"></a-gltf-model>
+<a-gltf-model src="#bugatti" position="2 0.36 33" scale="1.2 1.2 1.2" rotation="0 225 0"></a-gltf-model>
+<!-- tree -->
+ <a-entity>
+<a-gltf-model src="#tree" position="30 0.36 30" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="30 0.36 28" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="33 0.36 28" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="33 0.36 30" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="30 0.36 32" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="33 0.36 32" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="35 0.36 34" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="35 0.36 36" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+<a-gltf-model src="#tree" position="37 0.36 38" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+</a-entity>
+<!-- backbush -->
+<a-entity position="-63 0 -63">
+    <a-gltf-model src="#tree" position="30 0.36 30" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="30 0.36 28" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="33 0.36 28" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="33 0.36 30" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="30 0.36 32" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="33 0.36 32" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="35 0.36 34" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="35 0.36 36" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="37 0.36 38" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="27 0.36 29" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="25 0.36 28" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="25 0.36 32" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="30 0.36 32" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="31 0.36 35" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="31 0.36 38" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    <a-gltf-model src="#tree" position="37 0.36 38" scale="6 6 6" rotation="0 45 0"></a-gltf-model>
+    </a-entity>
+<!-- tenis pitch neat the house -->
+<a-gltf-model src="#tenis" position="-26 0.4 0" scale="0.007 0.007 0.007" rotation="0 270 0"></a-gltf-model>
+
+<!-- outside light  -->
+<a-entity gltf-model="#outsidelight" position="-19 0.2 10" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="10 0.2 10" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="0 0.2 10" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="-10 0.2 10" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="-19 0.2 7" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="-19 0.2 1" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="-19 0.2 -6" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="-19 0.2 -14" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="10 0.2 7" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="10 0.2 1" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="10 0.2 -6" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+<a-entity gltf-model="#outsidelight" position="10 0.2 -14" scale="1 1.3 1">
+    <!-- Golden light source -->
+    <a-light type="point" 
+            color="#FFD700" 
+            intensity="8" 
+            distance="3" 
+            decay="2"
+            position="0 2.1 0"> 
+    </a-light>
+</a-entity>
+
+
+
+<a-camera position="-23 2 0"></a-camera>
+
+
+
+
+
+
+
+
+
+    </a-scene>
+
+
+    <script src="/scripts/logic.js"></script>
+</body>
+</html>

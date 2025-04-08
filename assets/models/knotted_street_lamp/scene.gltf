@@ -1,0 +1,361 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2161,
+      "max": [
+        43.8787727355957,
+        26.81881332397461,
+        303.8636169433594
+      ],
+      "min": [
+        -26.818634033203125,
+        -91.26226043701172,
+        -0.1068115234375
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 25932,
+      "componentType": 5126,
+      "count": 2161,
+      "max": [
+        0.9995639324188232,
+        0.9995726943016052,
+        0.9996342658996582
+      ],
+      "min": [
+        -0.9995933771133423,
+        -0.9995666146278381,
+        -0.9999920725822449
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 9792,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 51864,
+      "componentType": 5126,
+      "count": 48,
+      "max": [
+        34.66303253173828,
+        -44.17729568481445,
+        278.41827392578125
+      ],
+      "min": [
+        -1.082998275756836,
+        -81.67242431640625,
+        238.7311553955078
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 52440,
+      "componentType": 5126,
+      "count": 48,
+      "max": [
+        0.9507459998130798,
+        0.9820300936698914,
+        0.25536978244781494
+      ],
+      "min": [
+        -0.9933218955993652,
+        -0.9240261316299438,
+        -0.4452230632305145
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 39168,
+      "componentType": 5125,
+      "count": 144,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 53016,
+      "componentType": 5126,
+      "count": 4296,
+      "max": [
+        57.01757049560547,
+        45.35633087158203,
+        302.86376953125
+      ],
+      "min": [
+        -33.729103088378906,
+        -75.89708709716797,
+        79.30150604248047
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 104568,
+      "componentType": 5126,
+      "count": 4296,
+      "max": [
+        0.9999403357505798,
+        0.9996041059494019,
+        0.9995983242988586
+      ],
+      "min": [
+        -0.9999188780784607,
+        -0.9996039867401123,
+        -0.9996047019958496
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 39744,
+      "componentType": 5125,
+      "count": 25410,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "milaink (https://sketchfab.com/milaink)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/knotted-street-lamp-6e704bc2d5544212a00df3e0d13b216e",
+      "title": "Knotted Street Lamp"
+    },
+    "generator": "Sketchfab-15.24.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 141384,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 156120,
+      "byteOffset": 141384,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 297504,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_emissive_strength"
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "bottom_and_top_street_lamp",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0705882,
+          0.0627451,
+          0.0862745,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.7583370115222441
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.9873090965038637,
+        1.0,
+        0.11106511231140416
+      ],
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 5.0
+        }
+      },
+      "name": "street_lamp_light",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.862745,
+          0.835294,
+          0.290196,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.803708644984338
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "pole_street_lamp",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.145098,
+          0.133333,
+          0.164706,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.851238962324676
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Loft046_bottom and top street lamp_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Loft046_street lamp light_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Loft046_pole street lamp_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "30216dd70af54610bec9576074042c03.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        -1.52587890625e-05,
+        -7.104873657226563e-05,
+        0.0,
+        1.0
+      ],
+      "name": "Loft046"
+    },
+    {
+      "mesh": 0,
+      "name": "Loft046_bottom and top street lamp_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Loft046_street lamp light_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Loft046_pole street lamp_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
